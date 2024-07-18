@@ -1,14 +1,14 @@
 <p align="center">
   <a href="#">
-    <img src="assets/fe/assets/img/logo_dark.png" alt="HeRa logo" height="100">
+    <img src="assets/fe/assets/images/logo_dark.png" alt="SIPADAK logo" height="100">
   </a>
 </p>
 
-<h1 align="center">HeRa - Healthy Rabbit App</h1>
+<h1 align="center">SIPADAK - Sistem Pakar Diagnosa Penyakit Domba dan Kambing  </h1>
 
 <p align="center">
   menggunakan metode AHP (Analytic Hierarchy Process) dan CF
               (Certainty Factor) untuk membantu Anda mendiagnosa penyakit
-              kelinci kesayangan Anda dengan tepat. Jaga kesehatan kelinci
+              Domba dan Kambing kesayangan Anda dengan tepat. Jaga kesehatan Domba dan Kambing
               Anda dengan teknologi terbaru!
 </p>
