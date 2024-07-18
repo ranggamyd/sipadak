@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">SIPADAK - Sistem Pakar Diagnosa Penyakit Domba dan Kambing  </h1>
+<h1 align="center">Sistem Pakar Diagnosa Penyakit Domba dan Kambing</h1>
 
 <p align="center">
   menggunakan metode AHP (Analytic Hierarchy Process) dan CF
