@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2024 at 09:46 PM
+-- Generation Time: Jul 21, 2024 at 02:58 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -67,6 +67,26 @@ CREATE TABLE `gejala` (
   `kode_gejala` varchar(10) NOT NULL,
   `nama_gejala` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `gejala`
+--
+
+INSERT INTO `gejala` (`id_gejala`, `kode_gejala`, `nama_gejala`) VALUES
+(1, 'G01', 'Dehidrasi'),
+(2, 'G02', 'Kotoran encer'),
+(3, 'G03', 'Tubuh lemah'),
+(4, 'G04', 'Mulut melepuh'),
+(5, 'G05', 'Mulut menganga'),
+(6, 'G06', 'Kaku'),
+(7, 'G07', 'Kejang otot'),
+(8, 'G08', 'Lubang hidung & dubur keluar darah'),
+(9, 'G09', 'Suhu tubuh meninggi'),
+(10, 'G10', 'Suka buang air'),
+(11, 'G11', 'Nafsu makan menurun'),
+(12, 'G12', 'Gatal di kulit dan badan'),
+(13, 'G13', 'Senang menggaruk tubuh'),
+(14, 'G14', 'Luka bulat dikulit badan & leher');
 
 -- --------------------------------------------------------
 
@@ -164,6 +184,18 @@ CREATE TABLE `penyakit` (
   `solusi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `penyakit`
+--
+
+INSERT INTO `penyakit` (`id_penyakit`, `kode_penyakit`, `deskripsi`, `nama_penyakit`, `solusi`) VALUES
+(1, 'P01', '', 'Diare', '− Berikan air minum yang bersih dan segar.\r\n− Berikan pakan yang mudah dicerna dan kaya\r\nserat.\r\n− Berikan obat antidiare yang diresepkan oleh\r\ndokter hewan'),
+(2, 'P02', '', 'Cacar Mulut', '− Vaksinasi domba Anda secara rutin dengan\r\nvaksin cacar mulut.\r\n− Isolasi domba yang sakit dari domba yang\r\nsehat.\r\n− Bersihkan dan desinfeksi kandang dan\r\nperalatan yang terkontaminasi.'),
+(3, 'P03', '', 'Tetanus', '− Vaksinasi domba Anda secara rutin dengan\r\nvaksin tetanus.\r\n− Bersihkan dan desinfeksi luka dengan benar.\r\n− Berikan antibiotik yang diresepkan oleh\r\ndokter hewan.'),
+(4, 'P04', '', 'Radang Limpa', '− Berikan pakan yang berkualitas tinggi dan\r\nbergizi.\r\n− Hindari pemberian pakan yang berjamur atau\r\nberacun.\r\n− Berikan antibiotik yang diresepkan oleh\r\ndokter hewan.'),
+(5, 'P05', '', 'Kudis', '− Berikan obat antiparasit yang diresepkan oleh\r\ndokter hewan.\r\n− Jaga kebersihan kandang dan peralatan.\r\n− Pisahkan domba yang sakit dari domba yang\r\nsehat'),
+(6, 'P06', '', 'Dermatitis', '− Berikan obat antiparasit yang diresepkan oleh\r\ndokter hewan.\r\n− Jaga kebersihan kandang dan peralatan.\r\n− Hindari stres pada domba.');
+
 -- --------------------------------------------------------
 
 --
@@ -176,6 +208,27 @@ CREATE TABLE `rule` (
   `id_gejala` int(11) NOT NULL,
   `cf_pakar` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `rule`
+--
+
+INSERT INTO `rule` (`id_rule`, `id_penyakit`, `id_gejala`, `cf_pakar`) VALUES
+(1, 1, 1, 0),
+(2, 1, 2, 0),
+(3, 1, 3, 0),
+(4, 2, 4, 0),
+(5, 2, 5, 0),
+(6, 3, 6, 0),
+(7, 3, 7, 0),
+(8, 4, 8, 0),
+(9, 4, 9, 0),
+(10, 4, 10, 0),
+(11, 5, 11, 0),
+(12, 5, 12, 0),
+(13, 5, 13, 0),
+(14, 6, 13, 0),
+(15, 6, 14, 0);
 
 --
 -- Indexes for dumped tables
@@ -255,7 +308,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `gejala`
 --
 ALTER TABLE `gejala`
-  MODIFY `id_gejala` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_gejala` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `hasil`
@@ -285,13 +338,13 @@ ALTER TABLE `pasien`
 -- AUTO_INCREMENT for table `penyakit`
 --
 ALTER TABLE `penyakit`
-  MODIFY `id_penyakit` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_penyakit` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `rule`
 --
 ALTER TABLE `rule`
-  MODIFY `id_rule` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_rule` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
