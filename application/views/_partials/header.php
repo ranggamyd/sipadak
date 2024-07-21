@@ -8,7 +8,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title><?= $title; ?> &mdash; HeRa</title>
+  <title><?= $title; ?> &mdash; SIPADAK</title>
 
   <link rel="shortcut icon" href="<?= base_url() ?>assets/fe/assets/images/logo_only_dark.png" type="image/x-icon">
 
