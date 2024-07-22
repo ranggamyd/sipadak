@@ -115,6 +115,13 @@
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
+                        <select name="jenis_hewan" id="jenis_hewan" class="form-control" required>
+                          <option value="">Jenis Hewan</option>
+                          <option value="domba">Domba</option>
+                          <option value="kambing">Kambing</option>
+                        </select>
+                      </fieldset>
+                      <fieldset>
                         <textarea name="alamat" type="text" class="form-control" id="alamat" placeholder="Alamat"></textarea>
                       </fieldset>
                     </div>
@@ -131,11 +138,11 @@
                             $no = 1;
                             foreach ($gejala as $item) : ?>
                               <tr>
-                                <td class="text-center"><?= $no++; ?></td>
-                                <td style="text-align: left;">Apakah <?= $item['nama_gejala'] ?>?</td>
+                                <td class="text-center align-middle"><?= $no++; ?></td>
+                                <td class="align-middle" style="text-align: left;">Apakah <?= $item['nama_gejala'] ?>?</td>
                                 <td>
-                                  <select name="kondisi[]" id="kondisi[]" class="form-control select-item">
-                                    <option value="0" readonly>-- PILIH --</option>
+                                  <select name="kondisi[]" id="kondisi[]" class="form-control select-item" style="margin-top: 0 !important;">
+                                    <option class="text-center" value="0" readonly>-- PILIH --</option>
                                     <?php foreach ($kondisi as $k) : ?>
                                       <option value="<?= $item['id_gejala'] . '_' . $k['id_kondisi']; ?>"><?= $k['nama_kondisi']; ?></option>
                                     <?php endforeach ?>

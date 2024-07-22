@@ -1844,7 +1844,7 @@ form#contact #map iframe {
   color: #fe664e;
 }
 
-form#contact input {
+form#contact input, select {
   width: 100%;
   height: 46px;
   background-color: transparent;
@@ -1854,7 +1854,7 @@ form#contact input {
   font-weight: 300;
   color: #2a2a2a;
   padding: 0px 20px;
-  border-radius: 23px;
+  /* border-radius: 23px; */
   margin-top: 30px;
 }
 
@@ -1867,9 +1867,9 @@ form#contact textarea {
   min-width: 100%;
   max-width: 100%;
   max-height: 200px;
-  min-height: 200px;
-  height: 200px;
-  border-radius: 23px;
+  min-height: 122.5px;
+  height: 122.5px;
+  /* border-radius: 23px; */
   background-color: transparent;
   border: 1px solid #eee;
   outline: none;

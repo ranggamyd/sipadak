@@ -110,6 +110,10 @@
                                                 <td><?= $item['no_hp'] ?></td>
                                             </tr>
                                             <tr>
+                                                <th>Jenis Hewan:</th>
+                                                <td><?= $item['jenis_hewwan'] ?></td>
+                                            </tr>
+                                            <tr>
                                                 <th>Alamat:</th>
                                                 <td><?= $item['alamat'] ?></td>
                                             </tr>

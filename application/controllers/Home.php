@@ -17,12 +17,14 @@ class Home extends CI_Controller
                     $nama       = $this->input->post('nama');
                     $umur       = $this->input->post('umur');
                     $no_hp      = $this->input->post('no_hp');
+                    $jenis_hewan      = $this->input->post('jenis_hewan');
                     $alamat     = $this->input->post('alamat');
 
                     $data1 = [
                         'nama'  => $nama,
                         'umur'  => $umur,
                         'no_hp' => $no_hp,
+                        'jenis_hewan' => $jenis_hewan,
                         'alamat' => $alamat,
                     ];
 

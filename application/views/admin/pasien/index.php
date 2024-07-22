@@ -23,6 +23,7 @@ $this->load->view('_partials/header');
                             <th>Nama</th>
                             <th>Umur</th>
                             <th>No. HP</th>
+                            <th>Jenis Hewan</th>
                             <th>Alamat</th>
                             <th><i class="fas fa-cogs"></i></th>
                         </thead>
@@ -35,6 +36,7 @@ $this->load->view('_partials/header');
                                     <td><?= $item['nama']; ?></span></td>
                                     <td><?= $item['umur'] ?></td>
                                     <td><?= $item['no_hp'] ?></td>
+                                    <td><?= $item['jenis_hewan'] ?></td>
                                     <td><?= $item['alamat'] ?></td>
                                     <td class="text-center">
                                         <?php if ($this->session->userdata('id_admin') == 1) : ?>
@@ -72,6 +74,12 @@ $this->load->view('_partials/header');
                     <input type="text" class="form-control mb-3" id="umur" name="umur" required>
                     <label for="no_hp">No. HP :</label>
                     <input type="text" class="form-control mb-3" id="no_hp" name="no_hp" required>
+                    <label for="jenis_hewan">Jenis Hewan :</label>
+                    <select class="form-control mb-3" id="jenis_hewan" name="jenis_hewan" required>
+                        <option value=""></option>
+                        <option value="domba">Domba</option>
+                        <option value="kambing">Kambing</option>
+                    </select>
                     <label for="alamat">Alamat :</label>
                     <textarea name="alamat" id="alamat" cols="10" rows="4" class="form-control"></textarea>
             </div>
