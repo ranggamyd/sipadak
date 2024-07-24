@@ -167,6 +167,7 @@ CREATE TABLE `pasien` (
   `nama` varchar(100) NOT NULL,
   `umur` varchar(50) NOT NULL,
   `no_hp` varchar(100) NOT NULL,
+  `jenis_hewan` ENUM('domba','kambing') NOT NULL;
   `alamat` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

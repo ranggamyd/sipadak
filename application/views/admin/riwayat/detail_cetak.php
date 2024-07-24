@@ -31,7 +31,7 @@ $this->load->view('_partials/header');
                                 </tr>
                                 <tr>
                                     <th>Jenis Hewan:</th>
-                                    <td><?= $item['jenis_hewwan'] ?></td>
+                                    <td><?= $pasien['jenis_hewan'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>Alamat:</th>

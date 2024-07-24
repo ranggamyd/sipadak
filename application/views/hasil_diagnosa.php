@@ -111,7 +111,7 @@
                                             </tr>
                                             <tr>
                                                 <th>Jenis Hewan:</th>
-                                                <td><?= $item['jenis_hewwan'] ?></td>
+                                                <td><?= $item['jenis_hewan'] ?></td>
                                             </tr>
                                             <tr>
                                                 <th>Alamat:</th>
