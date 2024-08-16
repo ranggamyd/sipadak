@@ -107,9 +107,6 @@
                         <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Lengkap" autocomplete="on" required>
                       </fieldset>
                       <fieldset>
-                        <input type="text" class="form-control" name="umur" id="umur" placeholder="Umur" required>
-                      </fieldset>
-                      <fieldset>
                         <input type="text" class="form-control" name="no_hp" id="no_hp" placeholder="No. HP" required>
                       </fieldset>
                     </div>
@@ -122,9 +119,17 @@
                         </select>
                       </fieldset>
                       <fieldset>
-                        <textarea name="alamat" type="text" class="form-control" id="alamat" placeholder="Alamat"></textarea>
+                        <select class="form-control" id="umur" name="umur" required>
+                          <option value="">Umur</option>
+                          <?php for ($i = 1; $i <= 15; $i++) { ?>
+                            <option value="<?= $i ?>"><?= $i == 1 ? '<=' : '' ?><?= $i ?> tahun</option>
+                          <?php } ?>
+                        </select>
                       </fieldset>
                     </div>
+                    <fieldset>
+                      <textarea name="alamat" type="text" class="form-control" id="alamat" placeholder="Alamat"></textarea>
+                    </fieldset>
                   </div>
                   <div class="row mt-5">
                     <div class="col">
