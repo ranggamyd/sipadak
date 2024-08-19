@@ -17,10 +17,10 @@ class Home extends CI_Controller
                     $nama       = $this->input->post('nama');
                     $umur       = $this->input->post('umur');
                     $no_hp      = $this->input->post('no_hp');
-                    $jenis_hewan      = $this->input->post('jenis_hewan');
+                    $jenis_hewan = $this->input->post('jenis_hewan');
                     $alamat     = $this->input->post('alamat');
 
-                    $data1 = [
+                    $data = [
                         'nama'  => $nama,
                         'umur'  => $umur,
                         'no_hp' => $no_hp,
@@ -28,19 +28,17 @@ class Home extends CI_Controller
                         'alamat' => $alamat,
                     ];
 
-                    $this->pasien_model->tambah2($data1);
+                    $this->pasien_model->tambah2($data);
 
-                    $id_pasien      = $this->input->post('id_pasien');
-                    $tgl_diagnosa   = $this->input->post('tgl_diagnosa');
+                    $id_pasien      = $this->db->insert_id();
+                    $tgl_diagnosa   = date_default_timezone_set('Asia/Jakarta');
                     $kondisi        = $this->input->post('kondisi');
                     $arbobot        = array('0', '1', '0.8', '0.6', '0.4', '0.2');
                     $argejala       = array();
 
                     foreach ($kondisi as $kondisi_item) {
                         $kondisi = explode("_", $kondisi_item);
-                        if (strlen($kondisi_item) > 1) {
-                            $argejala[$kondisi[0]] = $kondisi[1];
-                        }
+                        if (strlen($kondisi_item) > 1) $argejala[$kondisi[0]] = $kondisi[1];
                     }
 
                     //PERHITUNGAN CF
@@ -97,7 +95,6 @@ class Home extends CI_Controller
                             $vlpkt1[$np1] = $value1;
                         }
                     }
-
                     // END CF
 
                     $data = [

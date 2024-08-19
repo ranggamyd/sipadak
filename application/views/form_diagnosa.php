@@ -50,12 +50,6 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <!-- <li class="scroll-to-section"><a href="#top" class="active">Home</a></li> -->
-              <!-- <li class="scroll-to-section"><a href="#about">About</a></li>
-              <li class="scroll-to-section"><a href="#services">Services</a></li>
-              <li class="scroll-to-section"><a href="#portfolio">Projects</a></li>
-              <li class="scroll-to-section"><a href="#blog">Blog</a></li>
-              <li class="scroll-to-section"><a href="#contact">Contact</a></li>  -->
               <li>
                 <div class="border-first-button">
                   <a href="<?= base_url() ?>auth/login">Login</a>
@@ -85,11 +79,6 @@
         </div>
         <div class="col-lg-10 offset-lg-1 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
           <form id="contact" action="<?= base_url('home/diagnosa') ?>" method="post">
-            <input type="hidden" class="form-control main-form mb-3" id="id_pasien" value="<?= $idpasien ?>" name="id_pasien" readonly>
-            <input type="hidden" class="form-control main-form" name="tgl_diagnosa" id="tgl_diagnosa" value="<?php
-                                                                                                              date_default_timezone_set('Asia/Jakarta');
-                                                                                                              echo date('Y-m-d H:i:s');
-                                                                                                              ?>">
             <div class="row">
               <div class="col-lg-12">
                 <div class="contact-dec">
@@ -182,7 +171,6 @@
         <div class="col-lg-12">
           <p>
             Copyright © 2024 SIPADAK. All Rights Reserved.
-            <!-- <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p> -->
           </p>
         </div>
       </div>
